@@ -1,0 +1,43 @@
+select {
+    background: transparent;
+    border: none;
+    color: white;
+    width: 190px;
+    /* height: 20px; */
+    border: 1px solid #000000;
+    cursor: pointer;
+}
+
+option {
+    color: rgb(255, 255, 255);
+    background-color: rgba(0, 0, 0, 0.849);
+}
+select:focus {
+    outline: none;
+}
+
+.select-categories {
+    height: 20px;
+    width: 80px;
+    margin-top: 11px;
+
+    overflow: hidden;
+    position: relative;
+}
+.select-categories::after {
+    content: "\025be";
+    background-color: #000000;
+    scrollbar-width: 35px;
+    height: 30px;
+
+    position: absolute;
+    top: 0;
+    right: 0px;
+    pointer-events: none;
+}
+
+@media (max-width: 812px) {
+    .select-categories {
+        display: none;
+    }
+}

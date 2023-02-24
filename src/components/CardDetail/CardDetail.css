@@ -1,0 +1,239 @@
+.container-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 20px;
+}
+
+.container-encuadre {
+    background-color: #ffffff;
+    border-radius: 4px;
+    display: flex;
+
+    height: 550px;
+}
+
+.container-detail {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 70vh;
+    user-select: none;
+}
+.agregar-comprar {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.212);
+    border-radius: 10px;
+    width: 300px;
+    /* height: 200px; */
+}
+.encabezado-agregar-comprar {
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+    width: 270px;
+}
+/* -----------Details----------- */
+
+.img-detail {
+    border-radius: 8px;
+    max-width: 350px;
+}
+
+/* -----------Titles----------- */
+.vendidos {
+    font-weight: 100;
+    font-size: 12px;
+    margin-top: -20px;
+    color: rgba(0, 0, 0, 0.349);
+}
+.title-detail {
+    font-size: 20px;
+    font-weight: 700;
+    margin-top: -20px;
+}
+
+.description-detail {
+    font-size: 11px;
+    color: rgba(0, 0, 0, 0.425);
+    margin-top: -5px;
+}
+.category {
+    color: rgba(0, 0, 0, 0.719);
+    margin-top: -10px;
+}
+.price-detail {
+    display: flex;
+    justify-content: center;
+    background-color: rgba(187, 187, 187, 0.253);
+    width: 80px;
+    margin-top: -10px;
+    font-size: 22px;
+    font-weight: 500;
+    border-radius: 10px;
+}
+.cuotas {
+    font-size: 12px;
+    font-weight: 100;
+    color: rgba(0, 0, 0, 0.5);
+    margin-top: -20px;
+}
+.medios-pago {
+    color: #3488d6;
+    font-weight: 100;
+    margin-top: -20px;
+}
+.envios-gratis {
+    color: #02a751;
+    font-weight: 100;
+    margin-top: -5px;
+}
+/* -----------Buttons----------- */
+.button-agregar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #3488d61c;
+    border: 1px solid rgba(0, 0, 0, 0);
+    border-radius: 4px;
+    color: #3488d6;
+    width: 200px;
+    height: 40px;
+    font-size: 17px;
+    font-weight: 600;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.button-comprar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #3488d6;
+    border-radius: 4px;
+    color: white;
+    width: 200px;
+    height: 40px;
+    font-size: 17px;
+
+    font-weight: 600;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.button-comprar:hover {
+    background-color: #3a73a8;
+}
+.button-agregar:hover {
+    background-color: #3488d63d;
+}
+
+@media (max-width: 1100px) {
+    .container-encuadre {
+        width: 550px;
+    }
+
+    .img-detail {
+        width: 200px;
+    }
+}
+
+@media (max-width: 575px) {
+    .container-encuadre {
+        width: 350px;
+    }
+
+    .img-detail {
+        width: 100px;
+    }
+    .agregar-comprar {
+        width: 200px;
+    }
+    .vendidos {
+        margin-left: 40px;
+    }
+    .title-detail {
+        margin-left: 40px;
+    }
+    .description-detail {
+        display: flex;
+        justify-content: center;
+        width: 180px;
+        margin-left: 40px;
+    }
+    .category {
+        margin-left: 40px;
+    }
+    .price-detail {
+        margin-left: 40px;
+    }
+    .cuotas {
+        margin-left: 40px;
+    }
+    .medios-pago {
+        margin-left: 40px;
+    }
+    .envios-gratis {
+        margin-left: 40px;
+    }
+    .button-agregar {
+        width: 150px;
+    }
+    .button-comprar {
+        width: 150px;
+    }
+}
+
+@media (max-width: 410px) {
+    .container-encuadre {
+        width: 320px;
+    }
+
+    .img-detail {
+        width: 65px;
+    }
+    .agregar-comprar {
+        width: 195px;
+    }
+    .vendidos {
+        margin-left: 40px;
+    }
+    .title-detail {
+        margin-left: 40px;
+        font-size: 17px;
+        width: 198px;
+    }
+    .description-detail {
+        display: flex;
+        justify-content: center;
+        width: 180px;
+        margin-left: 40px;
+    }
+    .category {
+        margin-left: 40px;
+    }
+    .price-detail {
+        margin-left: 40px;
+    }
+    .cuotas {
+        margin-left: 40px;
+    }
+    .medios-pago {
+        margin-left: 40px;
+    }
+    .envios-gratis {
+        margin-left: 40px;
+    }
+    .button-agregar {
+        width: 150px;
+    }
+    .button-comprar {
+        width: 150px;
+    }
+}

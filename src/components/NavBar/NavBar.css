@@ -1,0 +1,198 @@
+a:link {
+    text-decoration: none;
+    color: white;
+}
+
+a:visited {
+    text-decoration: none;
+    color: white;
+}
+a:visited:hover {
+    color: white;
+}
+.container-navbar {
+    color: rgb(255, 255, 255);
+    height: 100px;
+    display: flex;
+    background-color: black;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+    user-select: none;
+}
+/* ------------------TITLE---------------------- */
+.conatiner-nav-title {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100px;
+}
+.nav-title {
+    margin-top: 10px;
+    font-size: 30px;
+}
+/* ------------------PROFILE---------------------- */
+.container-profileCart {
+    display: flex;
+
+    width: 500px;
+}
+/* ------------------IMG & LOGO---------------------- */
+.offer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(137, 196, 240);
+    background: linear-gradient(
+        286deg,
+        rgba(137, 196, 240, 1) 6%,
+        rgba(8, 91, 106, 1) 99%
+    );
+    margin-top: 39px;
+    margin-left: 10px;
+    border-radius: 3px;
+    height: 25px;
+    width: 210px;
+}
+.img-navbar {
+    width: 55px;
+    height: 20px;
+    margin-top: 40px;
+    margin-left: 10px;
+}
+.img-navbar-star {
+    width: 35px;
+    height: 10px;
+    margin-top: 47px;
+}
+.logos {
+    display: flex;
+    width: 350px;
+}
+/* ------------------INPUT & LIST---------------------- */
+
+.input-navbar {
+    width: 400px;
+
+    height: 35px;
+}
+.nav-menu-list {
+    display: flex;
+    justify-content: flex-start;
+
+    font-size: 12px;
+    font-weight: 100;
+
+    gap: 15px;
+
+    margin-top: 10px;
+}
+
+.nav-input-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    user-select: none;
+    margin-top: 20px;
+    height: 90px;
+    max-width: 600px;
+}
+
+.nav-compras {
+    display: flex;
+    align-items: flex-end;
+    font-size: 12px;
+    gap: 15px;
+    margin-bottom: 15px;
+
+    font-weight: 100;
+}
+/* ------------------Cart---------------------- */
+.imgCart {
+    width: 18px;
+    margin-top: 25px;
+}
+.cart-count {
+    display: flex;
+    gap: 5px;
+}
+.cart {
+    display: flex;
+    flex-direction: column;
+    margin-left: -240px;
+    color: rgb(255, 255, 255);
+    margin-top: 70px;
+}
+.countCart {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    height: 22px;
+    width: 22px;
+    margin-top: -40px;
+    margin-left: -1px;
+}
+
+@media (max-width: 812px) {
+    .input-navbar {
+        width: 200px;
+        margin-left: 40px;
+        height: 40px;
+    }
+    .nav-title {
+        margin-left: 10px;
+    }
+    .nav-compras {
+        display: none;
+    }
+    .logos {
+        width: 300px;
+    }
+    .offer {
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 580px) {
+    .input-navbar {
+        width: 100px;
+        height: 30px;
+    }
+
+    .nav-menu-list {
+        font-size: 10px;
+        margin-left: -130px;
+    }
+    .container-profileCart {
+        margin-left: 30px;
+        width: 150px;
+    }
+    .cart-count {
+        gap: 70px;
+    }
+    .offer {
+        display: none;
+    }
+    .logos {
+        display: none;
+    }
+    .cart {
+        margin-left: -120px;
+    }
+}
+@media (max-width: 370px) {
+    .offer {
+        justify-content: end;
+        height: 28px;
+        font-size: 8px;
+        width: 300px;
+    }
+    .logos {
+        width: 190px;
+    }
+    .cart {
+        margin-left: -80px;
+    }
+}

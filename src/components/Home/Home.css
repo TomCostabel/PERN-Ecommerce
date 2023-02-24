@@ -1,0 +1,51 @@
+body {
+    background-image: url("../../Imagenes/22.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    /* height: 100vh; */
+    background-attachment: fixed;
+    background-origin: left;
+
+    line-height: 1.6;
+    font-family: sans-serif;
+}
+
+.navBarInterna {
+    margin-top: 17px;
+}
+.contenidoPrincipal {
+    margin-top: 40px;
+}
+.buscador {
+    background-color: #161515;
+    border-color: #161515;
+    height: 40px;
+    width: 500px;
+    color: white;
+}
+.Titulo {
+    color: rgb(138, 138, 138);
+    font-size: 30px;
+    font-weight: 600;
+    margin-left: 20px;
+}
+
+.conteiner-central {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.slider-frame {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-home {
+    max-height: 350px;
+    max-width: 100%;
+    min-width: 360px;
+}

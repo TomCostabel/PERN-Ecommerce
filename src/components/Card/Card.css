@@ -1,0 +1,79 @@
+.container-card {
+    background: #ffffff;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10.1px);
+    /* -webkit-backdrop-filter: blur(10.1px); */
+
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+
+    width: 224px;
+    height: 320px;
+    user-select: none;
+}
+
+.imagen {
+    width: 224px;
+    height: 224px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.144);
+    object-fit: cover;
+    object-position: left;
+}
+.buttonclass {
+    display: flex;
+    align-items: center;
+    margin-right: 5px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 700;
+
+    height: 25px;
+    width: 56px;
+
+    margin-bottom: 4px;
+    border: 1px solid #0000009c;
+    background: #ffffffe1;
+    color: rgb(122, 116, 116);
+    transition: 0.2s;
+}
+.buttonclass:hover {
+    color: white;
+    background: #000000cb;
+    font-weight: 700;
+}
+.title-font {
+    color: rgba(0, 0, 0, 0.753);
+    margin-left: 5px;
+    margin-top: 5px;
+    max-width: 260px;
+    height: 15px;
+    font-weight: 500;
+    font-size: 12px;
+}
+
+.price {
+    color: rgba(0, 0, 0, 0.671);
+    margin-left: 5px;
+    font-weight: 700;
+    font-size: 15px;
+}
+.container-price {
+    display: flex;
+    align-items: flex-end;
+
+    justify-content: space-between;
+
+    height: 47px;
+}
+
+@media (max-width: 731px) {
+    .container-card {
+        width: 170px;
+        height: 320px;
+    }
+
+    .imagen {
+        width: 170px;
+        height: 224px;
+    }
+}

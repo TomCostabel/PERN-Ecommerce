@@ -1,0 +1,14 @@
+.buttonLogin {
+    height: 20px;
+    background-color: white;
+    border: 1px solid white;
+
+    font-weight: 500;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.buttonLogin:hover {
+    background-color: rgb(0, 0, 0);
+    color: white;
+    border: 1px solid white;
+}
