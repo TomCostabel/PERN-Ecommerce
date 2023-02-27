@@ -7,7 +7,7 @@ export const FILTER_BY_CATEGORY = "FILTER_BY_CATEGORY";
 export function getAllProducts() {
     return async function (dispatch) {
         try {
-            let res = await axios.get("http://localhost:3001/products");
+            let res = await axios.get("products");
             dispatch({
                 type: GET_ALL_PRODUCTS,
                 payload: res.data,
