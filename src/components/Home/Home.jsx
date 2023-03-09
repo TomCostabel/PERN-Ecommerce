@@ -15,7 +15,7 @@ export default function Home() {
     const [currentPage, setCurrentPage] = useState(0);
     const [loading, setLoading] = useState(true);
     // const [buscador] = useState([]);
-    const [buscador, setBuscador] = useState([]);
+    const [buscador] = useState([]);
     const [datos, setDatos] = useState([]);
     const dispatch = useDispatch();
 
@@ -23,19 +23,22 @@ export default function Home() {
 
     //------------------------------ "handleChange" --------------------------------------------------->
 
-    const handleChange = (e) => {
-        setBuscador(e.target.value);
-        setCurrentPage(0);
-    };
+    // const handleChange = (e) => {
+    //     setBuscador(e.target.value);
+    //     setCurrentPage(0);
+    // };
     //------------------------------ "useEffect" --------------------------------------------------->
 
     useEffect(() => {
         dispatch(getAllProducts());
+
+        // if (products.length < 15) setCurrentPage(0);
     }, [dispatch]);
 
     //---------------------------------//
 
     useEffect(() => {
+        if (products.length < 15) setCurrentPage(0);
         if (products.length && !datos.length) setDatos(products);
         setProductsActuales(
             datos.slice(
@@ -104,16 +107,14 @@ export default function Home() {
                     <div>
                         <NavBar />
                     </div>
-                    {/* <div className="slider-frame">
-                        <img className="img-home" src={img1} alt="" />
-                    </div> */}
+
                     <div>
-                        <input
+                        {/* <input
                             type="text"
                             placeholder="🔎 Search here..."
                             value={buscador}
                             onChange={(e) => handleChange(e)}
-                        />
+                        /> */}
 
                         <div className="conteiner-central">
                             <div>

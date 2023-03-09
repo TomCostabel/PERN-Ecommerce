@@ -1,0 +1,28 @@
+.comingSoon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    font-weight: 600;
+    margin-top: 300px;
+}
+.spinners {
+    margin-inline: auto;
+    /* margin-top: 450px; */
+
+    border: 2px solid rgb(0, 0, 0);
+    width: 20px;
+    height: 20px;
+    border-left-color: transparent;
+    border-radius: 50%;
+    animation: spinner 1s ease infinite;
+}
+
+@keyframes spinner {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

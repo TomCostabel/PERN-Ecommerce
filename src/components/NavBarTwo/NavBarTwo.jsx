@@ -27,7 +27,7 @@ export default function NavBarTwo() {
             <nav className="container-navbar-two">
                 <div className="conatiner-nav-title-two">
                     <Link to={"/"}>
-                        <h2 className="nav-title-two">EcoTech</h2>
+                        <h2 className="nav-title-two">Exodus</h2>
                     </Link>
                 </div>
                 <div className="nav-input-list-two">
@@ -40,9 +40,15 @@ export default function NavBarTwo() {
                         <Link to={"/"}>
                             <p>Inicio</p>
                         </Link>
-                        <p>Historial </p>
-                        <p>About we </p>
-                        <p>Help </p>
+                        <Link to={"/Historial"}>
+                            <p>Historial </p>
+                        </Link>
+                        <Link to={"/AboutWe"}>
+                            <p>About we </p>
+                        </Link>
+                        <Link to={"/Help"}>
+                            <p>Help </p>
+                        </Link>
                     </div>
                 </div>
                 <div className="container-profileCart-two">
@@ -76,8 +82,12 @@ export default function NavBarTwo() {
                                 </Link>
                             </div>
                             <div className="nav-compras">
-                                <p>My shopping</p>
-                                <p>Favorites</p>
+                                <Link to={"/MyShopping"}>
+                                    <p>My shopping</p>
+                                </Link>
+                                <Link to={"/Favorites"}>
+                                    <p>Favorites</p>
+                                </Link>
                             </div>
                             <Profile />
                         </div>

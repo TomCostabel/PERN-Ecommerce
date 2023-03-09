@@ -11,7 +11,7 @@ export default function NavBarCart() {
             <nav className="container-navbar-two">
                 <div className="conatiner-nav-title-two">
                     <Link to={"/"}>
-                        <h2 className="nav-title-two">EcoTech</h2>
+                        <h2 className="nav-title-two">Exodus</h2>
                     </Link>
                 </div>
                 <div className="nav-input-list-two">
@@ -24,9 +24,15 @@ export default function NavBarCart() {
                         <Link to={"/"}>
                             <p>Inicio</p>
                         </Link>
-                        <p>Historial </p>
-                        <p>About we </p>
-                        <p>Help </p>
+                        <Link to={"/Historial"}>
+                            <p>Historial </p>
+                        </Link>
+                        <Link to={"/AboutWe"}>
+                            <p>About we </p>
+                        </Link>
+                        <Link to={"/Help"}>
+                            <p>Help </p>
+                        </Link>
                     </div>
                 </div>
                 <div className="container-profileCart-two">

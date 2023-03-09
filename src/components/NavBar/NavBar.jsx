@@ -29,7 +29,9 @@ export default function NavBar() {
         <div>
             <nav className="container-navbar">
                 <div className="conatiner-nav-title">
-                    <h2 className="nav-title">EcoTech</h2>
+                    <Link to={"/"}>
+                        <h2 className="nav-title">Exodus</h2>
+                    </Link>
                 </div>
                 <div className="nav-input-list">
                     <input
@@ -39,10 +41,18 @@ export default function NavBar() {
                     />
 
                     <div className="nav-menu-list">
-                        <p>Offers</p>
-                        <p>Historial </p>
-                        <p>About we </p>
-                        <p>Help </p>
+                        <Link to={"/Offers"}>
+                            <p>Offers</p>
+                        </Link>
+                        <Link to={"/Historial"}>
+                            <p>Historial </p>
+                        </Link>
+                        <Link to={"/AboutWe"}>
+                            <p>About we </p>
+                        </Link>
+                        <Link to={"/Help"}>
+                            <p>Help </p>
+                        </Link>
 
                         <Filters />
                     </div>
@@ -79,8 +89,12 @@ export default function NavBar() {
                                 </Link>
                             </div>
                             <div className="nav-compras">
-                                <p>My shopping</p>
-                                <p>Favorites</p>
+                                <Link to={"/MyShopping"}>
+                                    <p>My shopping</p>
+                                </Link>
+                                <Link to={"/Favorites"}>
+                                    <p>Favorites</p>
+                                </Link>
                             </div>
                             <Profile />
                         </div>
