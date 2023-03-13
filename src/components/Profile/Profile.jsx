@@ -14,7 +14,11 @@ export default function Profile() {
         isAuthenticated && (
             <div className="container-profile">
                 <>
-                    <img className="fotito" src={user.picture}></img>
+                    <img
+                        className="fotito"
+                        src={user?.picture}
+                        alt="fotito"
+                    ></img>
                 </>
 
                 <h6 className=" d-flex align-items-center nickname">

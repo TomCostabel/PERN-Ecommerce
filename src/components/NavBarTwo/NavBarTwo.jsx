@@ -13,7 +13,7 @@ export default function NavBarTwo() {
     const [countCart, setCountCart] = useState();
     const cart = useSelector((state) => state.carrito);
     const { isAuthenticated, user } = useAuth0();
-
+    console.log(cart);
     //--------------------UseEffect------------------->
 
     useEffect(() => {

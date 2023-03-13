@@ -1,6 +1,9 @@
 import mongoose from "mongoose";
-const url =
-    "mongodb+srv://TomCostabel:Anguilaverde11@cluster0.ssblcmh.mongodb.net/DBproducts";
+import * as dotenv from "dotenv";
+dotenv.config();
+const { DB_PASSWORD, DB_USER } = process.env;
+
+const url = `mongodb+srv://${DB_USER}:${DB_PASSWORD}@cluster0.ssblcmh.mongodb.net/DBproducts`;
 
 // Con strictQuery estoy denegando un cambio que se viene en mongoDB 7
 mongoose.set("strictQuery", false);

@@ -23,7 +23,7 @@ export default function NavBar() {
             JSON.parse(localStorage.getItem(user?.nickname.toString())) || [];
         const total = changuito.length;
         setCountCart(total);
-    }, []);
+    }, [user?.nickname]);
 
     return (
         <div>
