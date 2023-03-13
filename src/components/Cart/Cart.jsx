@@ -6,6 +6,7 @@ import { getAllProducts } from "../../redux/actions";
 import "../Cart/Cart.css";
 import Loading from "../Loading/Loading";
 import NavBarCart from "../NavBarCart/NavBarCart";
+import swal from "sweetalert";
 
 export default function Carrito() {
     const products = useSelector((state) => state.productos);
@@ -28,6 +29,11 @@ export default function Carrito() {
     setTimeout(() => {
         setLoading(false);
     }, 500);
+
+    //----------------------------Alert------------------------>
+    const dropAlert = () => {
+        swal("Coming soon");
+    };
     //----------------------------Return------------------------>
 
     return (
@@ -89,7 +95,7 @@ export default function Carrito() {
                                             <div className="container-cada-producto">
                                                 <img
                                                     className="image"
-                                                    src={e.images[0]}
+                                                    src={e.images}
                                                     alt="fotoproduct"
                                                 />
 
@@ -176,7 +182,9 @@ export default function Carrito() {
                             <h1 className="totalPrice">
                                 Total ${totalCantidad}
                             </h1>
-                            <h2 className="pay">Procced to chekout</h2>
+                            <h2 className="pay" onClick={() => dropAlert()}>
+                                Procced to chekout
+                            </h2>
                         </div>
                     </div>
                 </div>

@@ -5,6 +5,7 @@ import NavBarTwo from "../NavBarTwo/NavBarTwo.jsx";
 import { useAuth0 } from "@auth0/auth0-react";
 import React, { useEffect } from "react";
 import "../CardDetail/CardDetail.css";
+import swal from "sweetalert";
 
 export default function CardDetail() {
     const { id } = useParams();
@@ -15,11 +16,11 @@ export default function CardDetail() {
     useEffect(() => {
         dispatch(getAllProducts());
     }, [dispatch, id]);
-
+    const dropAlert2 = () => {
+        swal("Coming soon");
+    };
     const dropAlert = () => {
-        alert(
-            "Antes de realizar una compra, por favor, ingrese con su usuario"
-        );
+        swal("⚠️Before shopping, please sign in");
     };
     return (
         <div>
@@ -27,14 +28,14 @@ export default function CardDetail() {
                 <NavBarTwo />
             </div>
 
-            {/* Si los traigo de DB tiene que ser id - 3, si es de la api id - 1 */}
+            {/* De DB id - 3, de la api id - 1 */}
             <br />
             <div className="container-detail">
                 <div className="container-encuadre">
                     <div className="container-img">
                         <img
                             className="img-detail"
-                            src={detail[id - 1]?.images[0]}
+                            src={detail[id - 1]?.images}
                             alt=""
                         />
                     </div>
@@ -71,7 +72,12 @@ export default function CardDetail() {
                             </h6>
                         </div>
                         <div>
-                            <h5 className="button-comprar">Buy now</h5>
+                            <h5
+                                className="button-comprar"
+                                onClick={() => dropAlert2()}
+                            >
+                                Buy now
+                            </h5>
                             {isAuthenticated ? (
                                 <button
                                     type="button"

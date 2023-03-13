@@ -19,6 +19,7 @@ function App() {
             <Route path="/Offers" element={<ComingSoon />} />
             <Route path="/MyShopping" element={<ComingSoon />} />
             <Route path="/Favorites" element={<ComingSoon />} />
+            <Route path="/PaymentMethods" element={<ComingSoon />} />
         </Routes>
     );
 }

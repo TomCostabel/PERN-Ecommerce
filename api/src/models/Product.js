@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 const Schema = mongoose.Schema;
 
-const ProductsModel = new Schema({
+const ProductsModels = new Schema({
     id: {
         type: Number,
     },
@@ -20,9 +20,9 @@ const ProductsModel = new Schema({
     },
     //------> ARREGLAR EL TYPE DE LA IMAGEN
     images: {
-        contentType: Array,
-        data: Buffer,
+        type: String,
+        // data: Buffer,
     },
 });
 
-export default mongoose.model("ProductsModel", ProductsModel);
+export default mongoose.model("ProductsModel", ProductsModels);
