@@ -22,9 +22,7 @@ export default function CardDetail() {
     const dropAlert = () => {
         swal("⚠️Before shopping, please sign in");
     };
-    const dropAlert3 = () => {
-        swal("A new product has been added to the cart");
-    };
+
     return (
         <div>
             <div>
