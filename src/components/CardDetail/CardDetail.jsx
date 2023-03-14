@@ -107,6 +107,7 @@ export default function CardDetail() {
                                 >
                                     Add to cart
                                 </button>
+                                // s
                             )}
                         </div>
                     </div>
