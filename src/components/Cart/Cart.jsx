@@ -19,7 +19,7 @@ export default function Carrito() {
     useEffect(() => {
         dispatch(getAllProducts());
         let changuito2 =
-            JSON.parse(localStorage.getItem(user.nickname?.toString())) || [];
+            JSON.parse(localStorage.getItem(user?.nickname?.toString())) || [];
         setCart(changuito2);
     }, [dispatch, setCart]);
 
