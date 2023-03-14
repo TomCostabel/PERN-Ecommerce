@@ -18,7 +18,7 @@ ReactDOM.render(
                     redirectUri={window.location.origin}
                     useRefreshTokens={true}
                     cacheLocation="memory"
-                    sameSite="None"
+                    sameSite="lax"
                 >
                     <App />
                 </Auth0Provider>
