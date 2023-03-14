@@ -92,8 +92,7 @@ export default function CardDetail() {
                                                 e.target.value,
                                                 user.nickname
                                             )
-                                        ),
-                                            dropAlert3();
+                                        );
                                     }}
                                 >
                                     Add to cart
@@ -107,7 +106,6 @@ export default function CardDetail() {
                                 >
                                     Add to cart
                                 </button>
-                                // s
                             )}
                         </div>
                     </div>
