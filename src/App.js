@@ -5,7 +5,8 @@ import CardDetail from "./components/CardDetail/CardDetail.jsx";
 import ComingSoon from "./components/ComingSoon/ComingSoon";
 import Cart from "./components/Cart/Cart";
 import axios from "axios";
-axios.defaults.baseURL = "http://localhost:3001/";
+// axios.defaults.baseURL = "http://localhost:3001/";
+axios.defaults.baseURL = "https://ecommerce1233.up.railway.app";
 
 function App() {
     return (
