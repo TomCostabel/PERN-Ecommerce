@@ -16,8 +16,9 @@ ReactDOM.render(
                     domain="dev-8seoamhcfag503c4.us.auth0.com"
                     clientId="lY6h383325CGJcfKsKD9zHTEHuRpRvk1"
                     redirectUri={window.location.origin}
-                    useRefreshTokens={true}
-                    cacheLocation="memory"
+                    // useRefreshTokens={true}
+                    // cacheLocation="memory"
+                    cacheLocation="localstorage"
                     sameSite="lax"
                 >
                     <App />
