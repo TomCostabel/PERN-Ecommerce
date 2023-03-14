@@ -5,9 +5,9 @@ dotenv.config();
 const { MONGOUSER, MONGOPASSWORD, MONGOHOST, MONGOPORT } = process.env;
 
 // const url = `mongodb+srv://${DB_USER}:${DB_PASSWORD}@cluster0.ssblcmh.mongodb.net/DBproducts`;
-const url = `mongodb://${MONGOUSER}:${MONGOPASSWORD}@${MONGOHOST}/${MONGOPORT}`;
+const url = `mongodb://${MONGOUSER}:${MONGOPASSWORD}@${MONGOHOST}:${MONGOPORT}`;
 
-("mongodb://mongo:FiblLN20BxZqsIZBfxSB@containers-us-west-146.railway.app:5916");
+// ("mongodb://mongo:FiblLN20BxZqsIZBfxSB@containers-us-west-146.railway.app:5916");S
 // Con strictQuery estoy denegando un cambio que se viene en mongoDB 7
 mongoose.set("strictQuery", false);
 mongoose
