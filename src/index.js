@@ -13,8 +13,8 @@ ReactDOM.render(
         <Provider store={store}>
             <BrowserRouter>
                 <Auth0Provider
-                    domain="dev-s4jjvf5a24s27iwu.us.auth0.com"
-                    clientId="ZDoBj7IAcDPdSoj4g5VjJuIyyw9HNJqj"
+                    domain="dev-8seoamhcfag503c4.us.auth0.com"
+                    clientId="lY6h383325CGJcfKsKD9zHTEHuRpRvk1"
                     redirectUri={window.location.origin}
                 >
                     <App />
