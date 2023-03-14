@@ -14,7 +14,6 @@ export default function Carrito() {
     const [cart, setCart] = useState([]);
     const dispatch = useDispatch();
     const { user } = useAuth0();
-    console.log(user?.nickname);
 
     //----------------------------UseEffect------------------------>
     useEffect(() => {
@@ -183,7 +182,7 @@ export default function Carrito() {
                                 Total ${totalCantidad}
                             </h1>
                             <h2 className="pay" onClick={() => dropAlert()}>
-                                Procced to chekout
+                                Procced to checkout
                             </h2>
                         </div>
                     </div>

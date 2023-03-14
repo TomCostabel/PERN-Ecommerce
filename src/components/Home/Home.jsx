@@ -31,8 +31,6 @@ export default function Home() {
 
     useEffect(() => {
         dispatch(getAllProducts());
-
-        // if (products.length < 15) setCurrentPage(0);
     }, [dispatch]);
 
     //---------------------------------//
