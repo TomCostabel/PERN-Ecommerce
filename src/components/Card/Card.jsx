@@ -4,9 +4,6 @@ import { Link } from "react-router-dom";
 import "../Card/Card.css";
 
 export default function Card(props) {
-    // const dispatch = useDispatch();
-    // const titleJoin = props.title.split(" ").join("");
-    console.log(props);
     return (
         <div
             className="container-card

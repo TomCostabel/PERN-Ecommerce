@@ -3,6 +3,7 @@ import {
     GET_PRODUCT_ID,
     ADD_PRODUCT_CARRITO,
     FILTER_BY_CATEGORY,
+    FILTER_BY_NAME,
 } from "../actions/index.js";
 
 const initialState = {
@@ -10,6 +11,7 @@ const initialState = {
     productos2: [],
     productDetail: [],
     carrito: [],
+    productosInput: "",
 };
 
 const rootReducer = (state = initialState, action) => {
@@ -39,13 +41,11 @@ const rootReducer = (state = initialState, action) => {
                     return 0;
                 }),
             };
-
         case GET_PRODUCT_ID:
             return {
                 ...state,
                 productDetail: action.payload,
             };
-
         case ADD_PRODUCT_CARRITO:
             let changuito =
                 JSON.parse(localStorage.getItem(action.data.toString())) || [];
@@ -58,7 +58,6 @@ const rootReducer = (state = initialState, action) => {
                 ...state,
                 carrito: [...state.carrito, action.payload],
             };
-
         case FILTER_BY_CATEGORY:
             const productos2 = state.productos2;
             const filterCategory =
@@ -70,7 +69,11 @@ const rootReducer = (state = initialState, action) => {
                 ...state,
                 productos: filterCategory,
             };
-
+        case FILTER_BY_NAME:
+            return {
+                ...state,
+                productosInput: action.payload,
+            };
         default:
             return state;
     }

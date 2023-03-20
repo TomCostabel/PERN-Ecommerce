@@ -13,20 +13,13 @@ export default function Home() {
     const [productsActuales, setProductsActuales] = useState([]);
     const products = useSelector((state) => state.productos);
     const [currentPage, setCurrentPage] = useState(0);
+    const productsInput = useSelector((state) => state.productosInput);
     const [loading, setLoading] = useState(true);
-    // const [buscador] = useState([]);
-    const [buscador] = useState([]);
+    const [buscador, setBuscador] = useState([]);
     const [datos, setDatos] = useState([]);
     const dispatch = useDispatch();
-
     const itemXPage = 15;
 
-    //------------------------------ "handleChange" --------------------------------------------------->
-
-    // const handleChange = (e) => {
-    //     setBuscador(e.target.value);
-    //     setCurrentPage(0);
-    // };
     //------------------------------ "useEffect" --------------------------------------------------->
 
     useEffect(() => {
@@ -36,6 +29,7 @@ export default function Home() {
     //---------------------------------//
 
     useEffect(() => {
+        !productsInput ? setBuscador([]) : setBuscador(productsInput);
         if (products.length < 15) setCurrentPage(0);
         if (products.length && !datos.length) setDatos(products);
         setProductsActuales(
@@ -44,7 +38,7 @@ export default function Home() {
                 currentPage * itemXPage + itemXPage
             )
         );
-    }, [dispatch, currentPage, datos, products, itemXPage]);
+    }, [dispatch, currentPage, datos, products, itemXPage, productsInput]);
 
     //---------------------------------//
 

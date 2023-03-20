@@ -37,7 +37,7 @@ export default function Carrito() {
 
     return (
         <>
-            {loading && !user?.nickname ? (
+            {loading ? (
                 <Loading />
             ) : (
                 <div className="containerCart-principal">

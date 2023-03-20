@@ -3,8 +3,8 @@ import productsRoutes from "./routes/products.routes.js";
 import cors from "cors";
 
 const corsOptions = {
-    // origin: "http://localhost:3000",
-    origin: "https://ecommerce-seven-theta.vercel.app",
+    origin: "http://localhost:3000",
+    // origin: "https://ecommerce-seven-theta.vercel.app",
 
     credentials: true, //access-control-allow-credentials:true
     optionSuccessStatus: 200,

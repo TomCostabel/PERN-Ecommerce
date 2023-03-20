@@ -1,9 +1,10 @@
 import { useAuth0 } from "@auth0/auth0-react";
 import React, { useEffect, useState } from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { LoginButton } from "../Login/Login";
 import "../NavBar/NavBar.css";
+import { filterByName } from "../../redux/actions";
 import Profile from "../Profile/Profile";
 import Filters from "../Filters/Filters.jsx";
 import img1 from "../../Imagenes/disney.png";
@@ -12,18 +13,26 @@ import img3 from "../../Imagenes/44.png";
 
 export default function NavBar() {
     const cart = useSelector((state) => state.carrito);
+
     const [countCart, setCountCart] = useState();
     const { isAuthenticated, user } = useAuth0();
-    console.log(cart);
+    const [buscador, setBuscador] = useState("");
+    const dispatch = useDispatch();
 
     //--------------------UseEffect------------------->
 
     useEffect(() => {
+        dispatch(filterByName(buscador));
+
         let changuito =
             JSON.parse(localStorage.getItem(user?.nickname.toString())) || [];
         const total = changuito.length;
         setCountCart(total);
-    }, [user?.nickname]);
+    }, [user?.nickname, buscador]);
+
+    const handleChange = (e) => {
+        setBuscador(e.target.value);
+    };
 
     return (
         <div>
@@ -37,6 +46,8 @@ export default function NavBar() {
                     <input
                         className="input-navbar"
                         type="text"
+                        value={buscador}
+                        onChange={(e) => handleChange(e)}
                         placeholder="    iPhone, Perfume, Glasses..."
                     />
 
