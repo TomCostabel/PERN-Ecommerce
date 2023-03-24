@@ -24,8 +24,8 @@ export default function NavBarCart() {
                         <Link to={"/"}>
                             <p>Inicio</p>
                         </Link>
-                        <Link to={"/Historial"}>
-                            <p>Historial </p>
+                        <Link to={"/Sell"}>
+                            <p>Sell </p>
                         </Link>
                         <Link to={"/AboutWe"}>
                             <p>About we </p>

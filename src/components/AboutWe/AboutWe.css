@@ -3,6 +3,7 @@
     align-items: center;
     justify-content: center;
     height: 100vh;
+    user-select: none;
 }
 .aboutwe-text {
     display: flex;
@@ -16,8 +17,8 @@
     align-items: center;
     justify-content: center;
     width: 780px;
-
     height: 500px;
+    margin-top: -150px;
     background-color: white;
     border-radius: 10px;
     border: 1px solid rgba(0, 0, 0, 0.075);

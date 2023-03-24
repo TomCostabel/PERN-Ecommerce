@@ -55,8 +55,8 @@ export default function NavBar() {
                         <Link to={"/Offers"}>
                             <p>Offers</p>
                         </Link>
-                        <Link to={"/Historial"}>
-                            <p>Historial </p>
+                        <Link to={"/Sell"}>
+                            <p>Sell </p>
                         </Link>
                         <Link to={"/AboutWe"}>
                             <p>About we </p>
