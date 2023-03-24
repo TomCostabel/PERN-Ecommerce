@@ -74,6 +74,7 @@ const rootReducer = (state = initialState, action) => {
                 ...state,
                 productosInput: action.payload,
             };
+
         default:
             return state;
     }

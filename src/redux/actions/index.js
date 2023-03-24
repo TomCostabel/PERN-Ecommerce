@@ -4,7 +4,7 @@ export const GET_PRODUCT_ID = "GET_PRODUCT_ID";
 export const ADD_PRODUCT_CARRITO = "ADD_PRODUCT_CARRITO";
 export const FILTER_BY_CATEGORY = "FILTER_BY_CATEGORY";
 export const FILTER_BY_NAME = "FILTER_BY_NAME";
-
+export const ADD_PRODUCT_FAVORITE = "ADD_PRODUCT_FAVORITE";
 export function getAllProducts() {
     return async function (dispatch) {
         try {
@@ -41,3 +41,13 @@ export function filterByName(payload) {
         payload,
     };
 }
+// export function addFav(payload) {
+//     try {
+//         return {
+//             type: ADD_PRODUCT_FAVORITE,
+//             payload,
+//         };
+//     } catch (error) {
+//         console.log(error);
+//     }
+// }
