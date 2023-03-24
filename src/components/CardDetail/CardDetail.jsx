@@ -85,12 +85,30 @@ export default function CardDetail() {
                                     className="button-agregar"
                                     value={detail[id - 1]?.title}
                                     onClick={(e) => {
-                                        dispatch(
-                                            addProductCarrito(
-                                                e.target.value,
-                                                user.nickname
-                                            )
-                                        );
+                                        {
+                                            swal({
+                                                title: "1 unit of this product will be added to the cart",
+                                                text: "Are you sure? ",
+                                                icon: "warning",
+                                                buttons: true,
+                                                dangerMode: true,
+                                            }).then((willDelete) => {
+                                                if (willDelete) {
+                                                    swal("Added product!", {
+                                                        icon: "success",
+                                                    });
+
+                                                    dispatch(
+                                                        addProductCarrito(
+                                                            e.target.value,
+                                                            user.nickname
+                                                        )
+                                                    );
+                                                } else {
+                                                    swal("Product not added!");
+                                                }
+                                            });
+                                        }
                                     }}
                                 >
                                     Add to cart

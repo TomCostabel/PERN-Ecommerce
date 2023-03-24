@@ -82,9 +82,6 @@ export default function NavBarTwo() {
                                 </Link>
                             </div>
                             <div className="nav-compras">
-                                <Link to={"/MyShopping"}>
-                                    <p>My shopping</p>
-                                </Link>
                                 <Link to={"/Favorites"}>
                                     <p>Favorites</p>
                                 </Link>

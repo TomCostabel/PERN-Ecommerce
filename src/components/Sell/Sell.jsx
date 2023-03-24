@@ -4,8 +4,12 @@ import img from "../../Imagenes/Vender.png";
 import img3 from "../../Imagenes/Estadisticas.jpg";
 import "../Sell/Sell.css";
 import gmail from "../../Imagenes/correo-electronico.png";
+import swal from "sweetalert";
 
 export default function Sell() {
+    const dropAlert = () => {
+        swal("📧Future redirect");
+    };
     return (
         <div>
             <NavBarTwo />
@@ -34,7 +38,10 @@ export default function Sell() {
                         Please contact us via gmail. After a few simple steps,
                         you can be officially a verified seller of "Exodus".
                     </h3>
-                    <button className="button-gmail-sell">
+                    <button
+                        onClick={() => dropAlert()}
+                        className="button-gmail-sell"
+                    >
                         <img className="gmail" src={gmail} />{" "}
                     </button>
                 </div>

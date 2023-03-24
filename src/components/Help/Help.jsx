@@ -4,10 +4,14 @@ import img from "../../Imagenes/asistentevirtual.jpg";
 import wsp from "../../Imagenes/whatsapp.png";
 import gmail from "../../Imagenes/correo-electronico.png";
 import telephone from "../../Imagenes/telephone.png";
+import swal from "sweetalert";
 
 import "../Help/Help.css";
 
 export default function Help() {
+    const dropAlert = () => {
+        swal("📧Future redirect");
+    };
     return (
         <div>
             <NavBarTwo />
@@ -26,13 +30,13 @@ export default function Help() {
                         Where would you prefer us to contact you?
                     </h3>
                     <div className="buttons-help">
-                        <button className="button">
+                        <button onClick={() => dropAlert()} className="button">
                             <img className="gmail" src={gmail} />{" "}
                         </button>
-                        <button className="button">
+                        <button onClick={() => dropAlert()} className="button">
                             <img className="wsp" src={wsp} />
                         </button>
-                        <button className="button">
+                        <button onClick={() => dropAlert()} className="button">
                             <img className="telephone" src={telephone} />{" "}
                         </button>
                     </div>

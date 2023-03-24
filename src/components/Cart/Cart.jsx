@@ -52,15 +52,37 @@ export default function Carrito() {
                                 if (cart?.includes(e.title)) {
                                     //-------------------------------------- ELIMINAR TODOS DEL LocalStorage ------------------//
                                     const deleteAllProducts = (value) => {
-                                        let deleteAll = cart.filter(
-                                            (e) => e !== value
-                                        );
-                                        setCart(deleteAll);
+                                        {
+                                            swal({
+                                                title: `It will delete the ${count} products.`,
+                                                text: "Are you sure? ",
+                                                icon: "warning",
+                                                buttons: true,
+                                                dangerMode: true,
+                                            }).then((willDelete) => {
+                                                if (willDelete) {
+                                                    swal("Removed products!", {
+                                                        icon: "success",
+                                                    });
+                                                    // logout({ returnTo: window.location.origin });
+                                                    let deleteAll = cart.filter(
+                                                        (e) => e !== value
+                                                    );
+                                                    setCart(deleteAll);
 
-                                        localStorage.setItem(
-                                            user.nickname.toString(),
-                                            JSON.stringify(deleteAll)
-                                        );
+                                                    localStorage.setItem(
+                                                        user.nickname.toString(),
+                                                        JSON.stringify(
+                                                            deleteAll
+                                                        )
+                                                    );
+                                                } else {
+                                                    swal(
+                                                        "The products will remain in the cart."
+                                                    );
+                                                }
+                                            });
+                                        }
                                     };
                                     //-------------------------------------- RESTAR PRODUCTOS AL LocalStorage ------------------//
 
