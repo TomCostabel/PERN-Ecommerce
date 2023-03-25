@@ -4,6 +4,7 @@ import {
     ADD_PRODUCT_CARRITO,
     FILTER_BY_CATEGORY,
     FILTER_BY_NAME,
+    ADD_PRODUCT_FAVORITE,
 } from "../actions/index.js";
 
 const initialState = {
@@ -12,6 +13,7 @@ const initialState = {
     productDetail: [],
     carrito: [],
     productosInput: "",
+    prodFav: [],
 };
 
 const rootReducer = (state = initialState, action) => {
@@ -74,7 +76,20 @@ const rootReducer = (state = initialState, action) => {
                 ...state,
                 productosInput: action.payload,
             };
+        case ADD_PRODUCT_FAVORITE:
+            let favLocalStorage =
+                JSON.parse(localStorage.getItem("ProductosFavoritos")) || [];
+            if (!favLocalStorage.includes(action.payload)) {
+                localStorage.setItem(
+                    "ProductosFavoritos",
+                    JSON.stringify([...favLocalStorage, action.payload])
+                );
+            }
 
+            return {
+                ...state,
+                prodFav: favLocalStorage,
+            };
         default:
             return state;
     }

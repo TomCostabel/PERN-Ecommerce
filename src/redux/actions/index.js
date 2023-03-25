@@ -41,13 +41,14 @@ export function filterByName(payload) {
         payload,
     };
 }
-// export function addFav(payload) {
-//     try {
-//         return {
-//             type: ADD_PRODUCT_FAVORITE,
-//             payload,
-//         };
-//     } catch (error) {
-//         console.log(error);
-//     }
-// }
+export function addFav(payload) {
+    try {
+        console.log("payload", payload);
+        return {
+            type: ADD_PRODUCT_FAVORITE,
+            payload,
+        };
+    } catch (error) {
+        console.log(error);
+    }
+}

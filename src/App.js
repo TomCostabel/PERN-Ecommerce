@@ -8,6 +8,7 @@ import axios from "axios";
 import AboutWe from "./components/AboutWe/AboutWe";
 import Help from "./components/Help/Help";
 import Sell from "./components/Sell/Sell";
+import Favorites from "./components/Favorites/Favorites";
 axios.defaults.baseURL = "http://localhost:3001/";
 // axios.defaults.baseURL = "https://ecommerce1233.up.railway.app";
 
@@ -21,8 +22,7 @@ function App() {
             <Route path="/AboutWe" element={<AboutWe />} />
             <Route path="/Help" element={<Help />} />
             <Route path="/Offers" element={<ComingSoon />} />
-            <Route path="/MyShopping" element={<ComingSoon />} />
-            <Route path="/Favorites" element={<ComingSoon />} />
+            <Route path="/Favorites" element={<Favorites />} />
             <Route path="/PaymentMethods" element={<ComingSoon />} />
         </Routes>
     );

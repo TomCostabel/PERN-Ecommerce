@@ -1,21 +1,14 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import { addFav, getAllProducts } from "../../redux/actions";
 import "../Card/Card.css";
 
 export default function Card(props) {
-    // ARREGLAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAR
+    const prodFav = useSelector((state) => state.prodFav);
 
-    const [fav, setFav] = useState([]);
-    const addFav = (e) => {
-        if (!fav.length) setFav(e);
-        console.log(fav);
-        if (!fav.includes(e.toString())) {
-            setFav(e.toString());
-            localStorage.setItem("Products fav", JSON.stringify(fav));
-        }
+    const dispatch = useDispatch();
 
-        // console.log(localStorage.getItem("Products fav"));
-    };
     return (
         <div
             className="container-card
@@ -36,11 +29,16 @@ export default function Card(props) {
                 <button
                     className="button-fav"
                     value={props.title}
-                    onClick={(e) => {
-                        addFav(e.target.value);
-                    }}
+                    onClick={(e) => dispatch(addFav(e.target.value))}
                 >
                     X
+                </button>
+                <button
+                    className="button-fav"
+                    value={props.title}
+                    onClick={() => console.log("acaaa", prodFav)}
+                >
+                    r
                 </button>
             </div>
         </div>
