@@ -64,7 +64,6 @@ export default function Carrito() {
                                                     swal("Removed products!", {
                                                         icon: "success",
                                                     });
-                                                    // logout({ returnTo: window.location.origin });
                                                     let deleteAll = cart.filter(
                                                         (e) => e !== value
                                                     );

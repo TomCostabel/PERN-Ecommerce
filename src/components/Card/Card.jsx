@@ -11,7 +11,7 @@ export default function Card(props) {
 
     const prodFav =
         JSON.parse(
-            localStorage.getItem(`${user?.nickname}ProductosFavoritos`)
+            localStorage.getItem(`${user?.nickname}ProductosFavorites`)
         ) || [];
 
     const dispatch = useDispatch();

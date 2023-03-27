@@ -1,16 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
 import NavBarTwo from "../NavBarTwo/NavBarTwo";
 import img from "../../Imagenes/Vender.png";
 import img3 from "../../Imagenes/Estadisticas.jpg";
 import "../Sell/Sell.css";
 import gmail from "../../Imagenes/correo-electronico.png";
 import swal from "sweetalert";
+import Loading from "../Loading/Loading";
 
 export default function Sell() {
+    const [loading, setLoading] = useState(true);
+
     const dropAlert = () => {
         swal("📧Future redirect");
     };
-    return (
+
+    setTimeout(() => {
+        setLoading(false);
+    }, 1000);
+    return loading ? (
+        <Loading />
+    ) : (
         <div>
             <NavBarTwo />
             <div className="container-img-sell">

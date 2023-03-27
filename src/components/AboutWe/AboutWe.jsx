@@ -1,9 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import NavBarTwo from "../NavBarTwo/NavBarTwo";
 import "../AboutWe/AboutWe.css";
 import img from "../../Imagenes/empresa.png";
+import Loading from "../Loading/Loading";
 export default function AboutWe() {
-    return (
+    const [loading, setLoading] = useState(true);
+
+    setTimeout(() => {
+        setLoading(false);
+    }, 1000);
+    return loading ? (
+        <Loading />
+    ) : (
         <div>
             <NavBarTwo />
             <div className="container-aboutwe">

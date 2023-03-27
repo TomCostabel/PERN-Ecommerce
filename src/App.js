@@ -21,7 +21,6 @@ function App() {
             <Route path="/Sell" element={<Sell />} />
             <Route path="/AboutWe" element={<AboutWe />} />
             <Route path="/Help" element={<Help />} />
-            <Route path="/Offers" element={<ComingSoon />} />
             <Route path="/Favorites" element={<Favorites />} />
             <Route path="/PaymentMethods" element={<ComingSoon />} />
         </Routes>

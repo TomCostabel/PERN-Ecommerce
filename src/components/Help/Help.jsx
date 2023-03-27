@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import NavBarTwo from "../NavBarTwo/NavBarTwo";
 import img from "../../Imagenes/asistentevirtual.jpg";
 import wsp from "../../Imagenes/whatsapp.png";
@@ -7,12 +7,20 @@ import telephone from "../../Imagenes/telephone.png";
 import swal from "sweetalert";
 
 import "../Help/Help.css";
+import Loading from "../Loading/Loading";
 
 export default function Help() {
+    const [loading, setLoading] = useState(true);
+
+    setTimeout(() => {
+        setLoading(false);
+    }, 1000);
     const dropAlert = () => {
         swal("📧Future redirect");
     };
-    return (
+    return loading ? (
+        <Loading />
+    ) : (
         <div>
             <NavBarTwo />
             <div className="container-img-help">

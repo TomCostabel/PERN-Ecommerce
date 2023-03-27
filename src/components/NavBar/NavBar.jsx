@@ -52,9 +52,6 @@ export default function NavBar() {
                     />
 
                     <div className="nav-menu-list">
-                        <Link to={"/Offers"}>
-                            <p>Offers</p>
-                        </Link>
                         <Link to={"/Sell"}>
                             <p>Sell </p>
                         </Link>

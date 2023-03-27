@@ -88,7 +88,7 @@ export default function Home() {
 
     setTimeout(() => {
         setLoading(false);
-    }, 1500);
+    }, 1000);
 
     //------------------------------ "Return" ------------------------------------------------>
 
@@ -103,13 +103,6 @@ export default function Home() {
                     </div>
 
                     <div>
-                        {/* <input
-                            type="text"
-                            placeholder="🔎 Search here..."
-                            value={buscador}
-                            onChange={(e) => handleChange(e)}
-                        /> */}
-
                         <div className="conteiner-central">
                             <div>
                                 <Pagination
@@ -129,6 +122,7 @@ export default function Home() {
                                     currentPage={currentPage}
                                     nextHandler={nextHandler}
                                     prevHandler={prevHandler}
+                                    prd={products.length}
                                 />
                             </div>
                         </div>

@@ -79,11 +79,11 @@ const rootReducer = (state = initialState, action) => {
         case ADD_PRODUCT_FAVORITE:
             let favLocalStorage =
                 JSON.parse(
-                    localStorage.getItem(`${action.data}ProductosFavoritos`)
+                    localStorage.getItem(`${action.data}ProductosFavorites`)
                 ) || [];
             if (!favLocalStorage.includes(action.payload)) {
                 localStorage.setItem(
-                    `${action.data}ProductosFavoritos`,
+                    `${action.data}ProductosFavorites`,
                     JSON.stringify([...favLocalStorage, action.payload])
                 );
             }
@@ -92,7 +92,7 @@ const rootReducer = (state = initialState, action) => {
                     (e) => e !== action.payload
                 );
                 localStorage.setItem(
-                    `${action.data}ProductosFavoritos`,
+                    `${action.data}ProductosFavorites`,
                     JSON.stringify(deleteFav)
                 );
             }
