@@ -41,12 +41,12 @@ export function filterByName(payload) {
         payload,
     };
 }
-export function addFav(payload) {
+export function addFav(payload, data) {
     try {
-        console.log("payload", payload);
         return {
             type: ADD_PRODUCT_FAVORITE,
             payload,
+            data,
         };
     } catch (error) {
         console.log(error);

@@ -146,7 +146,7 @@ export default function Carrito() {
                                                             )
                                                         }
                                                     >
-                                                        Eliminar
+                                                        Eliminate
                                                     </button>
                                                 </div>
                                                 <div className="sumar-restar">

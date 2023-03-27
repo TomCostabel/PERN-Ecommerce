@@ -12,6 +12,8 @@ export default function Home() {
 
     const [productsActuales, setProductsActuales] = useState([]);
     const products = useSelector((state) => state.productos);
+    const favs = useSelector((state) => state.prodFav);
+
     const [currentPage, setCurrentPage] = useState(0);
     const productsInput = useSelector((state) => state.productosInput);
     const [loading, setLoading] = useState(true);

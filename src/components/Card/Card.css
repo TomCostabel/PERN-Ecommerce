@@ -79,9 +79,36 @@
 }
 
 .button-fav {
-    height: 20px;
-    width: 20px;
-    margin-top: 100px;
-    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    height: 27px;
+    width: 30px;
+    color: rgba(0, 0, 0, 0.363);
     cursor: pointer;
+    font-size: 30px;
+    background-color: white;
+    border: 1px solid white;
+    transition: 1s;
+}
+.button-fav-red {
+    display: flex;
+    justify-content: center;
+    height: 27px;
+    width: 30px;
+    color: rgb(231, 18, 18);
+    cursor: pointer;
+    font-size: 30px;
+    background-color: white;
+    border: 1px solid white;
+
+    transition: 1s;
+}
+
+.corazon-fav {
+    width: 30px;
+    margin-top: -10px;
+    cursor: pointer;
+}
+.div-button {
+    height: 68px;
 }

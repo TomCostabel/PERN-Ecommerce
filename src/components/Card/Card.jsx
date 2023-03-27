@@ -1,11 +1,18 @@
+import { useAuth0 } from "@auth0/auth0-react";
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { addFav, getAllProducts } from "../../redux/actions";
+import img from "../../Imagenes/corazon.png";
 import "../Card/Card.css";
 
 export default function Card(props) {
-    const prodFav = useSelector((state) => state.prodFav);
+    const { user } = useAuth0();
+
+    const prodFav =
+        JSON.parse(
+            localStorage.getItem(`${user?.nickname}ProductosFavoritos`)
+        ) || [];
 
     const dispatch = useDispatch();
 
@@ -26,20 +33,29 @@ export default function Card(props) {
             "
             >
                 <h6 className="price">$ {props.price}</h6>
-                <button
-                    className="button-fav"
-                    value={props.title}
-                    onClick={(e) => dispatch(addFav(e.target.value))}
-                >
-                    X
-                </button>
-                <button
-                    className="button-fav"
-                    value={props.title}
-                    onClick={() => console.log("acaaa", prodFav)}
-                >
-                    r
-                </button>
+                <div className="div-button">
+                    {prodFav?.includes(props.title) ? (
+                        <button
+                            className="button-fav-red"
+                            value={props.title}
+                            onClick={(e) =>
+                                dispatch(addFav(e.target.value, user.nickname))
+                            }
+                        >
+                            ♡
+                        </button>
+                    ) : (
+                        <button
+                            className="button-fav"
+                            value={props.title}
+                            onClick={(e) =>
+                                dispatch(addFav(e.target.value, user.nickname))
+                            }
+                        >
+                            ♡
+                        </button>
+                    )}
+                </div>
             </div>
         </div>
     );
