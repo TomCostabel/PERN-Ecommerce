@@ -63,7 +63,7 @@ export default function Favorites() {
                                     value={e.title}
                                     onClick={(e) => deleteFav(e.target.value)}
                                 >
-                                    Eliminate
+                                    Delete
                                 </button>
                             </div>
                         );

@@ -9,6 +9,7 @@ import AboutWe from "./components/AboutWe/AboutWe";
 import Help from "./components/Help/Help";
 import Sell from "./components/Sell/Sell";
 import Favorites from "./components/Favorites/Favorites";
+import PaymentMethods from "./components/PaymentMethods/PaymentMethods";
 axios.defaults.baseURL = "http://localhost:3001/";
 // axios.defaults.baseURL = "https://ecommerce1233.up.railway.app";
 
@@ -22,7 +23,7 @@ function App() {
             <Route path="/AboutWe" element={<AboutWe />} />
             <Route path="/Help" element={<Help />} />
             <Route path="/Favorites" element={<Favorites />} />
-            <Route path="/PaymentMethods" element={<ComingSoon />} />
+            <Route path="/PaymentMethods" element={<PaymentMethods />} />
         </Routes>
     );
 }

@@ -44,8 +44,7 @@ export default function CardDetail() {
                     <div className="agregar-comprar">
                         <div className="encabezado-agregar-comprar">
                             <h6 className="vendidos">
-                                Nuevo | +{detail[id - 1]?.title.length * 3}{" "}
-                                vendidos
+                                New | +{detail[id - 1]?.title.length * 3} sold
                             </h6>
                             <h1 className="title-detail">
                                 {detail[id - 1]?.title}
@@ -69,7 +68,7 @@ export default function CardDetail() {
                                 <h6 className="medios-pago">Payment methods</h6>
                             </Link>
                             <h6 className="envios-gratis">
-                                Envio gratis para compras mayoristas.
+                                Free shipping for wholesale purchases.
                             </h6>
                         </div>
                         <div>
