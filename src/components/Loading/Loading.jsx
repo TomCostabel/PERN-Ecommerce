@@ -4,7 +4,7 @@ import NavBarTwo from "../NavBarTwo/NavBarTwo";
 
 export default function Loading() {
     return (
-        <div>
+        <div className="container-loading">
             <NavBarTwo />
             <div className="spinner"> </div>
         </div>

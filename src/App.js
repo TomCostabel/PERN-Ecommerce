@@ -10,6 +10,7 @@ import Help from "./components/Help/Help";
 import Sell from "./components/Sell/Sell";
 import Favorites from "./components/Favorites/Favorites";
 import PaymentMethods from "./components/PaymentMethods/PaymentMethods";
+import CheckoutPage from "./components/CheckoutPage/CheckoutPage";
 axios.defaults.baseURL = "http://localhost:3001/";
 // axios.defaults.baseURL = "https://ecommerce1233.up.railway.app";
 
@@ -24,6 +25,7 @@ function App() {
             <Route path="/Help" element={<Help />} />
             <Route path="/Favorites" element={<Favorites />} />
             <Route path="/PaymentMethods" element={<PaymentMethods />} />
+            <Route path="/CheckoutPage" element={<CheckoutPage />} />
         </Routes>
     );
 }

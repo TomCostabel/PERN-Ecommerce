@@ -7,6 +7,7 @@ import "../Cart/Cart.css";
 import Loading from "../Loading/Loading";
 import NavBarCart from "../NavBarCart/NavBarCart";
 import swal from "sweetalert";
+import { Link } from "react-router-dom";
 
 export default function Carrito() {
     const products = useSelector((state) => state.productos);
@@ -202,9 +203,9 @@ export default function Carrito() {
                             <h1 className="totalPrice">
                                 Total ${totalCantidad}
                             </h1>
-                            <h2 className="pay" onClick={() => dropAlert()}>
-                                Procced to checkout
-                            </h2>
+                            <Link to="/CheckoutPage">
+                                <h2 className="pay">Procced to checkout</h2>
+                            </Link>
                         </div>
                     </div>
                 </div>
