@@ -8,6 +8,7 @@ import Loading from "../Loading/Loading";
 import NavBarCart from "../NavBarCart/NavBarCart";
 import swal from "sweetalert";
 import { Link } from "react-router-dom";
+import NavBarTwo from "../NavBarTwo/NavBarTwo";
 
 export default function Carrito() {
     const products = useSelector((state) => state.productos);
@@ -42,7 +43,7 @@ export default function Carrito() {
                 <Loading />
             ) : (
                 <div className="containerCart-principal">
-                    <NavBarCart />
+                    <NavBarTwo />
                     <br></br>
 
                     <div className="containerCart-encuadre">

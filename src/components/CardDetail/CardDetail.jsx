@@ -64,20 +64,15 @@ export default function CardDetail() {
                                 in 12x $
                                 {(detail[id - 1]?.price / 12 + 3).toFixed()}
                             </h6>
-                            <Link to={"/PaymentMethods"}>
-                                <h6 className="medios-pago">Payment methods</h6>
-                            </Link>
+
                             <h6 className="envios-gratis">
                                 Free shipping for wholesale purchases.
                             </h6>
                         </div>
                         <div>
-                            <h5
-                                className="button-comprar"
-                                onClick={() => dropAlert2()}
-                            >
-                                Buy now
-                            </h5>
+                            <Link to={"/CheckoutPage"}>
+                                <h5 className="button-comprar">Buy now</h5>
+                            </Link>
                             {isAuthenticated ? (
                                 <button
                                     type="button"

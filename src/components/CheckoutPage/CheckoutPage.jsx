@@ -14,7 +14,9 @@ export default function CheckoutPage() {
         <div className="containerCheck">
             <NavBarTwo />
             <div className="centrar-form">
-                <h1>Hola a todos</h1>
+                <h1 className="title-checkout">
+                    Fill in the necessary information to make the payment.
+                </h1>
                 <div className="form-container">
                     <div className="field-container">
                         <label for="name">Name</label>
@@ -56,6 +58,7 @@ export default function CheckoutPage() {
                     <div className="field-container">
                         <label for="securitycode">Security Code</label>
                         <input
+                            placeholder="***"
                             className="input-check"
                             id="securitycode"
                             type="text"

@@ -4,6 +4,7 @@
     align-items: center;
     justify-content: center;
     user-select: none;
+    margin-top: 50px;
 }
 .container-white-sell {
     display: flex;
@@ -12,7 +13,7 @@
     align-items: center;
 
     border-radius: 20px;
-    font-size: 20px;
+    font-size: 18px;
     background-color: white;
     width: 1100px;
     height: 1200px;
@@ -24,12 +25,12 @@
 }
 .text-sell {
     width: 900px;
-    font-size: 18px;
+    font-size: 23px;
     margin-top: 60px;
 }
 .text-sell-title {
     width: 900px;
-    font-size: 28px;
+    font-size: 23px;
 }
 .button-gmail-sell {
     height: 60px;
@@ -45,3 +46,43 @@
 .button-gmail-sell:hover {
     border: 2px solid rgb(0, 0, 0);
 }
+
+@media (max-width: 1120px) {
+    .container-white-sell {
+        width: 800px;
+        height: 120vh;
+    }
+    .text-sell {
+        width: 700px;
+        font-size: 18px;
+        margin-top: 60px;
+    }
+    .text-sell-title {
+        width: 700px;
+        font-size: 20px;
+    }
+    .imgSell {
+        width: 700px;
+        border-radius: 10px;
+    }
+}
+@media (max-width: 500px) {
+    .container-white-sell {
+        width: 400px;
+        /* height: 90vh; */
+        margin-top: -150px;
+    }
+    .text-sell {
+        width: 350px;
+        font-size: 12px;
+        margin-top: 60px;
+    }
+    .text-sell-title {
+        width: 350px;
+        font-size: 12px;
+    }
+    .imgSell {
+        width: 350px;
+        border-radius: 10px;
+    }
+} ;
