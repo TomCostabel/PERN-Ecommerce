@@ -8,6 +8,7 @@ import img from "../../Imagenes/card.png";
 export default function CheckoutPage() {
     const [loading, setLoading] = useState(true);
     const [err, setErr] = useState({});
+    const navigate = useNavigate();
     const [inputPay, setInputPay] = useState({
         name: "",
         numberCard: "",
@@ -64,13 +65,15 @@ export default function CheckoutPage() {
         )
             console.log("✔️Compra realizada con exito"),
                 swal("✔️Compra realizada con exito"),
+                // .then(() => {
                 setInputPay({
                     name: "",
                     numberCard: "",
                     expirationCard: "",
                     securityCode: "",
                 }),
-                useNavigate();
+                navigate("/");
+        // });
         else {
             swal("❌Por favor, complete todos los campos");
         }
