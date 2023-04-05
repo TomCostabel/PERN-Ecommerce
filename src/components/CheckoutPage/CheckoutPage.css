@@ -82,14 +82,6 @@ label {
     border: 1px solid #000000;
 }
 
-.ccicon {
-    height: 38px;
-    position: absolute;
-    right: 6px;
-    top: calc(50% - 17px);
-    width: 60px;
-}
-
 @media (max-width: 450px) {
     .title-checkout {
         width: 350px;

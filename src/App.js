@@ -2,7 +2,6 @@ import "./App.css";
 import { Route, Routes } from "react-router-dom";
 import Home from "./components/Home/Home.jsx";
 import CardDetail from "./components/CardDetail/CardDetail.jsx";
-import ComingSoon from "./components/ComingSoon/ComingSoon";
 import Cart from "./components/Cart/Cart";
 import axios from "axios";
 import AboutWe from "./components/AboutWe/AboutWe";

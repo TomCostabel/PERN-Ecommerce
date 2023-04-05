@@ -5,7 +5,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { getAllProducts } from "../../redux/actions";
 import "../Cart/Cart.css";
 import Loading from "../Loading/Loading";
-import NavBarCart from "../NavBarCart/NavBarCart";
 import swal from "sweetalert";
 import { Link } from "react-router-dom";
 import NavBarTwo from "../NavBarTwo/NavBarTwo";
@@ -21,9 +20,9 @@ export default function Carrito() {
     useEffect(() => {
         dispatch(getAllProducts());
         let changuito2 =
-            JSON.parse(localStorage.getItem(user?.nickname?.toString())) || [];
+            JSON.parse(localStorage.getItem(user?.nickname.toString())) || [];
         setCart(changuito2);
-    }, [dispatch, setCart]);
+    }, [dispatch, setCart, user?.nickname]);
 
     var totalCantidad = 0;
 
@@ -31,10 +30,6 @@ export default function Carrito() {
         setLoading(false);
     }, 500);
 
-    //----------------------------Alert------------------------>
-    const dropAlert = () => {
-        swal("Coming soon");
-    };
     //----------------------------Return------------------------>
 
     return (
@@ -152,6 +147,8 @@ export default function Carrito() {
                                                 </div>
                                                 <div className="sumar-restar">
                                                     {count == 1 ? (
+                                                        // ---Button restar producto---
+
                                                         <button
                                                             disabled
                                                             className="button-masmenos"
@@ -164,6 +161,7 @@ export default function Carrito() {
                                                             -
                                                         </button>
                                                     ) : (
+                                                        // ---Button restar producto---
                                                         <button
                                                             className="button-masmenos"
                                                             onClick={() =>
@@ -178,6 +176,7 @@ export default function Carrito() {
                                                     <p className="count">
                                                         {count}{" "}
                                                     </p>
+                                                    {/* ----Button sumar producto---- */}
                                                     <button
                                                         className="button-masmenos"
                                                         onClick={() =>

@@ -51,7 +51,7 @@ export default function Sell() {
                         onClick={() => dropAlert()}
                         className="button-gmail-sell"
                     >
-                        <img className="gmail" src={gmail} />{" "}
+                        <img className="gmail" src={gmail} alt="logo-gmail" />
                     </button>
                 </div>
             </div>
