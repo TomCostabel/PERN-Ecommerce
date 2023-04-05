@@ -4,6 +4,7 @@ import Loading from "../Loading/Loading";
 import NavBarTwo from "../NavBarTwo/NavBarTwo";
 import swal from "sweetalert";
 import { useNavigate } from "react-router-dom";
+import img from "../../Imagenes/card.png";
 export default function CheckoutPage() {
     const [loading, setLoading] = useState(true);
     const [err, setErr] = useState({});
@@ -112,8 +113,9 @@ export default function CheckoutPage() {
                             onChange={(e) => handleChange(e)}
                         />
                     </div>
+
                     <div className="field-container">
-                        <label>Card Number</label>
+                        <label>Card Number </label>
                         <input
                             className="input-check"
                             id="numberCard"
@@ -151,8 +153,12 @@ export default function CheckoutPage() {
                         onClick={(e) => handleSubmit(e)}
                         className="button-pagar"
                     >
-                        Pay
+                        Pay 💳
                     </button>
+                    <div>
+                        {" "}
+                        <img className="imagen-creaditCard" src={img} />
+                    </div>
                 </div>
             </div>
         </div>
